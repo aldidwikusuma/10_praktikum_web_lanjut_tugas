@@ -21,3 +21,4 @@ Route::resource('/mahasiswa', MahasiswaController::class);
 
 Route::get('search', [MahasiswaController::class,'search'])->name('search');
 Route::get('/mahasiswa/nilai/{mahasiswa}', [NilaiController::class, 'index']);
+Route::get('/mahasiswa/cetakpdf/{mahasiswa}', [MahasiswaController::class, 'cetak_pdf'])->name('pdf');

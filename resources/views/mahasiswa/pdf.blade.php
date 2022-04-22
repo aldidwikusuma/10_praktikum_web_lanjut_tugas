@@ -15,6 +15,7 @@
     <h4>Nama : {{ $mahasiswa->Nama }}</h4>
     <h4>Kelas : {{ $mahasiswa->Kelas->nama_kelas }}</h4>
     <table class="table table-bordered">
+
         <tr>
             <th>Matakuliah</th>
             <th>Sks</th>
@@ -30,7 +31,6 @@
             </tr>
         @endforeach
     </table>
-    <div class="text-center">
-        <a href="{{ route('pdf', $mahasiswa->Nim) }}" class="btn btn-danger"> Cetak PDF</a>
-    </div>
 @endsection
+
+</html>
