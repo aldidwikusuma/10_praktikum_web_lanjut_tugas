@@ -103,7 +103,7 @@ class MahasiswaController extends Controller
     {
         $keyword = $request->search;
         $mahasiswas = Mahasiswa::where('nama', 'like', "%" . $keyword . "%")->paginate(5);
-        return view(view: 'mahasiswa.index', data: compact(var_name: 'mahasiswas'));
+        return view('mahasiswa.index', ['mahasiswas' => $mahasiswa]);
     }
 
     public function khs($Nim)

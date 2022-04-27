@@ -32,7 +32,7 @@
             <th>Jurusan</th>
             <th>No_Handphone</th>
             <th>Email</th>
-            <th>TTL</th>
+            <th>Tanggal Lahir</th>
             <th width="280px">Action</th>
         </tr>
 
@@ -46,7 +46,7 @@
                 <td>{{ $Mahasiswa->Jurusan }}</td>
                 <td>{{ $Mahasiswa->No_Handphone }}</td>
                 <td>{{ $Mahasiswa->Email }}</td>
-                <td>{{ $Mahasiswa->TTL }}</td>
+                <td>{{ Carbon\Carbon::parse($Mahasiswa ->Tanggal_lahir)->format('d-m-Y') }}</td>
                 <td>
                     <form action=" {{ route('mahasiswa.destroy', $Mahasiswa->Nim) }}" method="POST">
 
